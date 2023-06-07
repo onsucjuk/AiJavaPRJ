@@ -26,7 +26,7 @@ public class OcrService implements IOcrService {
         instance.setDatapath(IOcrService.modelFile);
         // IOcrService 인터페이스 파일에 정의한 상수 받아오기
 
-        instance.setLanguage("eng");
+        instance.setLanguage("kor");
         // 이미지 한국어 설정 <기본값은 영어>
         // 우리가 받은 ITesseract 파일이 kor<한국어> 파일임
 

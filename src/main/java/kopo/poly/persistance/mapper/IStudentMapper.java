@@ -16,6 +16,6 @@ public interface IStudentMapper {
     StudentDTO getStudent(StudentDTO pDTO) throws Exception;
     // 조회 결과값 : 단일(1개)
 
-    StudentDTO deleteStudent(StudentDTO pDTO) throws Exception;
+    void deleteStudent(StudentDTO pDTO) throws Exception;
     // 데이터 삭제
 }

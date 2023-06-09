@@ -3,6 +3,7 @@ package kopo.poly;
 import kopo.poly.dto.StudentDTO;
 import kopo.poly.service.INlpService;
 import kopo.poly.service.IOcrService;
+import kopo.poly.service.IStudentDelete;
 import kopo.poly.service.IStudentService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -29,6 +30,7 @@ public class AiJavaPrjApplication implements CommandLineRunner {
     //자연어 처리
 
     private final IStudentService studentService;
+    private final IStudentDelete studentDElete;
     // DB 처리
 
     public static void main(String[] args) {
@@ -121,6 +123,8 @@ public class AiJavaPrjApplication implements CommandLineRunner {
                 log.info("DB에 저장된 이메일 : " + dto.getEmail());
                 log.info("DB에 저장된 주소 : " + dto.getAddr());
                 });
+
+        studentDElete.deleteStudent(pDTO);
 
         log.info("자바 프로그래밍 종료!!");
     }

@@ -18,4 +18,6 @@ public interface IStudentMapper {
 
     void deleteStudent(StudentDTO pDTO) throws Exception;
     // 데이터 삭제
+
+    void updateStudent(StudentDTO pDTO) throws Exception;
 }
